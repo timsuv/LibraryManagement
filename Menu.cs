@@ -21,9 +21,11 @@ namespace LibraryManagement
             {
                 
                 
-                Console.WriteLine("[1] Add a book");
+                Console.WriteLine("[1] Return a book");
                 Console.WriteLine("[2] Show the books in the library");
-                Console.WriteLine("[3] Finish the program");
+                Console.WriteLine("[3] Loan a book");
+                Console.WriteLine("[4] Finish the program");
+             
                 //Console.Clear();
                 int choice;
 
@@ -33,6 +35,8 @@ namespace LibraryManagement
                     {
                         case 1:
                             Book newBook = new Book();
+                            library.AddBook(new Book("Harry Potter", "JK Rowling", "1", 50));
+
                             library.AddBook(newBook);
                             break;
                         case 2:
@@ -40,6 +44,10 @@ namespace LibraryManagement
                             library.ShowAllBooks();
                             break;
                         case 3:
+                            library.LoanBook();
+                           
+                            break;
+                        case 4:
                             Environment.Exit(0);
                             break;
                         default:
