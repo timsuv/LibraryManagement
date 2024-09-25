@@ -35,8 +35,6 @@ namespace LibraryManagement
                     {
                         case 1:
                             Book newBook = new Book();
-                            library.AddBook(new Book("Harry Potter", "JK Rowling", "1", 50));
-
                             library.AddBook(newBook);
                             break;
                         case 2:

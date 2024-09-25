@@ -26,20 +26,17 @@ namespace LibraryManagement
         }
         public void AddBook(Book book)
         {
-
+           
             //using linq to find if the ISBN is already in the system
             bool alreadyExist = Books.Any(b => b.ISBN == book.ISBN);
             if (alreadyExist)
             {
                 Console.WriteLine("A book with the same ISBN already exists");
-            }
-            else
-            {
-        
+
                 Books.Add(book);
                 Console.WriteLine(book.ToString());
             }
-           
+          
         }
         public void ShowAllBooks()
         {
@@ -83,6 +80,7 @@ namespace LibraryManagement
                 if (selectedBook.CopiesAvailable == 0)
                 {
                     Books.Remove(selectedBook);
+                    Console.WriteLine($"The {selectedBook} is not longer available");
                 }
                 Console.WriteLine($"You loaned {selectedBook}");
             }
