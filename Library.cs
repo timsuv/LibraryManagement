@@ -21,15 +21,24 @@ namespace LibraryManagement
         {
             Book book = new Book();
             Books.Add(book);
+            Console.WriteLine(book.ToString());
         }
         public void ShowAllBooks()
-        { 
-        foreach (var books in Books)
+        {
+            if (Books.Count == 0)
             {
-                Console.WriteLine(books.ToString());
+                Console.WriteLine("The library is empty for now, you can add some books!");
             }
+            else
+            {
+                foreach (var books in Books)
+                {
+                    Console.WriteLine(books.ToString());
+                }
+            }
+
         }
-        
-      
+
+
     }
 }

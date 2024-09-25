@@ -30,7 +30,7 @@ namespace LibraryManagement
         }
         public void ShowBook()
         {
-            Console.WriteLine($"You can loan {Title} by {Author}, the ISBN is {ISBN} and there is {CopiesAvailable} copies");
+            Console.WriteLine($"You book is {Title} by {Author}, the ISBN is {ISBN} and there is {CopiesAvailable} copies");
         }
         public bool AvailableBook()
         {
