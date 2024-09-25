@@ -17,11 +17,21 @@ namespace LibraryManagement
             this.Books = new List<Book>();
         }
 
-        public void AddBook(string title, string author, string isbn, int copiesAvailable)
+        public void AddBook(Book book)
         {
-            Book book = new Book();
-            Books.Add(book);
-            Console.WriteLine(book.ToString());
+            
+            bool alreadyExist = Books.Any(b => b.ISBN == book.ISBN);
+            if (alreadyExist)
+            {
+                Console.WriteLine("A book with the same ISBN already exists");
+            }
+            else
+            {
+        
+                Books.Add(book);
+                Console.WriteLine(book.ToString());
+            }
+           
         }
         public void ShowAllBooks()
         {
@@ -36,6 +46,7 @@ namespace LibraryManagement
                     Console.WriteLine(books.ToString());
                 }
             }
+
 
         }
 

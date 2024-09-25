@@ -32,8 +32,8 @@ namespace LibraryManagement
                     switch (choice)
                     {
                         case 1:
-                          
-                            library.AddBook(title: "Harry Potter", "JK Rowling", "1", 50);
+                            Book newBook = new Book();
+                            library.AddBook(newBook);
                             break;
                         case 2:
                           
