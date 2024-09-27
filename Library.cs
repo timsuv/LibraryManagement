@@ -36,7 +36,13 @@ namespace LibraryManagement
                 Books.Add(book);
                 Console.WriteLine(book.ToString());
             }
-          
+            else
+            {
+                Books.Add(book);
+                Console.WriteLine(book.ToString());
+            }
+           
+
         }
         public void ShowAllBooks()
         {
